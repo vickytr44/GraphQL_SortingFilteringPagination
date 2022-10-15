@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services
     .AddSingleton<OrderRepository>()
     .AddGraphQLServer()
+    .AddSorting()
     .AddQueryType<Query>()
     .PublishSchemaDefinition(c => c
             .SetName("order")
