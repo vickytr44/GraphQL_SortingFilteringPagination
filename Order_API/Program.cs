@@ -14,6 +14,7 @@ builder.Services
     .AddSingleton<OrderRepository>()
     .AddGraphQLServer()
     .AddSorting()
+    .AddFiltering()
     .AddQueryType<Query>()
     .PublishSchemaDefinition(c => c
             .SetName("order")
