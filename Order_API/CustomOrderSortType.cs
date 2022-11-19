@@ -2,7 +2,7 @@
 
 namespace Order_API
 {
-    public class CustomerOrderSortType: SortInputType<OrderType>
+    public class CustomOrderSortType: SortInputType<OrderType>
     {
         protected override void Configure(ISortInputTypeDescriptor<OrderType> descriptor)
         {
