@@ -8,8 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="HotChocolate.AspNetCore" Version="12.13.2" />
+    <PackageReference Include="HotChocolate.Data" Version="12.15.2" />
     <PackageReference Include="HotChocolate.Stitching.Redis" Version="12.13.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Stitching.graphql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

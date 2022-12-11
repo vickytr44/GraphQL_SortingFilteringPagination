@@ -14,8 +14,10 @@ builder.Services
     .AddSingleton<CustomerRepository>()
     .AddGraphQLServer()
     .AddQueryType<Query>()
+    .AddFiltering()
     .PublishSchemaDefinition(c => c
-        .SetName("customer"));
+        .SetName("customer")
+        .AddTypeExtensionsFromFile("./Stitching.graphql"));
 
 var app = builder.Build();
 
