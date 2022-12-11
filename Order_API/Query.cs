@@ -2,7 +2,7 @@
 {   
     public class Query 
     {
-        [UsePaging]
+        [UsePaging(IncludeTotalCount =true)]
         [UseFiltering(typeof(CustomOrderFilterType))]
         [UseSorting(typeof(CustomOrderSortType))]
         public List<OrderType> GetOrder([Service] OrderRepository orderRepository)
@@ -10,12 +10,13 @@
             return orderRepository.GetOrder();
         }
 
-        [UsePaging]
+        [UsePaging(IncludeTotalCount = true)]
         [UseFiltering(typeof(CustomOrderFilterType))]
         [UseSorting(typeof(CustomOrderSortType))]
         public List<OrderType> GetOrderBy([Service] OrderRepository orderRepository,string name)
         {
-            return orderRepository.GetOrderBy(name);
+            var test = orderRepository.GetOrderBy(name);
+            return test;
         }
     }
 }
